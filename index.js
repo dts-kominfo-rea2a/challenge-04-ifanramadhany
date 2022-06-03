@@ -9,14 +9,13 @@ const dates = [
 
 // TODO: Buatlah fungsi createDate
 const createDate = (dates, index) => {
+  let result = []
   if (index) {
-    let result = []
     for (let i = 0; i < dates.length; i++) {
       result.push(Date.parse(dates[i]))
     }
     return result[index].toString().slice(0, -3)
   } else {
-    let result = []
     for (let i = 0; i < dates.length; i++) {
       result.push(Date.parse(dates[i]).toString().slice(0, -3))
     }
