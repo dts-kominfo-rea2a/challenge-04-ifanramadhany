@@ -10,7 +10,7 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (dates, index) => {
   let result = []
-  if (index) {
+  if (index !== undefined) {
     for (let i = 0; i < dates.length; i++) {
       result.push(Date.parse(dates[i]))
     }
@@ -31,7 +31,7 @@ const createDate = (dates, index) => {
   console.log(createDate?.(dates));
 
   // '1614841200' (dalam string)
-  console.log(createDate?.(dates, 2));
+  console.log(createDate?.(dates, 0));
 })();
 
 module.exports = {
